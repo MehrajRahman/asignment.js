@@ -37,10 +37,11 @@ function budgetCalculator(numOfWatches, numOfPhone, numOfLaptop){
     else{
         totalBudget = totalBudget + numOfLaptop*500;
     }
-
-    return totalBudget;
-    
+    return totalBudget;    
 }
+
+
+
 
 
 
@@ -71,6 +72,10 @@ function hotelCost(numOfStayingDays){
     return totalHotelCost;
 
 }
+
+
+
+
 
 
 
@@ -109,10 +114,8 @@ function megaName(nameFriend){
         
             }
             nameLength = 0;
-    }
-
-    }
-    
+        }
+    }    
     return bigName;
 }
 
