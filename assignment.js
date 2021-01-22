@@ -1,3 +1,6 @@
+//https://github.com/MehrajRahman/asignment.js
+
+
 //First Function to convert Kilometer to Meter....
 function kilometerToMeter(kilometerValue){
     if(kilometerValue < 0 || kilometerValue == NaN || kilometerValue == undefined ){
@@ -7,8 +10,7 @@ function kilometerToMeter(kilometerValue){
         return kilometerValue * 1000; 
     }
 }
-// var result = kilometerToMeter(0);
-// console.log(result)
+
 
 
 
@@ -39,8 +41,7 @@ function budgetCalculator(numOfWatches, numOfPhone, numOfLaptop){
     return totalBudget;
     
 }
-var result1 = budgetCalculator(20, 30, 40);
-console.log(result1);
+
 
 
 //Third function to calculate the hotel Cost
@@ -70,18 +71,21 @@ function hotelCost(numOfStayingDays){
     return totalHotelCost;
 
 }
-var result2 = hotelCost(24);
-console.log(result2);
+
 
 
 // Fourth function for finding the biggest name from a string
 //******** */
 function megaName(nameFriend){
-    if( nameFriend == NaN || nameFriend == undefined || nameFriend == ""){
+    if( nameFriend.length ==0){
+        return "you entered an empty array"
+
+    }
+    else if(nameFriend == NaN || nameFriend == undefined || nameFriend == ""){
         return "Sorry Your Input is not a valid one";
     }
     else{
-        var splitName = nameFriend.split(" ");      // created the input string into an array.
+        
         var nameLength = 0;        // here i will count the number of digit of a name.
         var bigName; 
         var bigNameLength = 0;   // here the big name will be updated on its length digit. like 6/8/9
@@ -89,8 +93,8 @@ function megaName(nameFriend){
         //in the first for loop it will move into the first index of the array. splitName[0]
         // Loop will continue untill the last index arrives.
 
-        for(var i =0; i<splitName.length; i++){ 
-            var nameSection = splitName[i]; 
+        for(var i =0; i<nameFriend.length; i++){ 
+            var nameSection = nameFriend[i]; 
 
             // this second loop will calculate the length of the first Name  
 
@@ -111,5 +115,21 @@ function megaName(nameFriend){
     
     return bigName;
 }
-var result3 =  megaName("Salam Kalam Rofik Borkot abcdjsdfjlskfj nomonnnoton Nobittono kobito robito")
+
+
+/**
+ * Here checking the out put of all function
+ */
+
+var result = kilometerToMeter(25);
+console.log(result)
+
+var result1 = budgetCalculator(20, 30, 40);
+console.log(result1);
+
+var result2 = hotelCost(24);
+console.log(result2);
+
+
+var result3 =  megaName(["Rahim", "Karim","aajafhkjsf", "adhfkhdsf","hjgff","jhsfg"]);
 console.log(result3);
